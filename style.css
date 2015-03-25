@@ -1,0 +1,102 @@
+h1{
+	text-align: center;
+	font-family: Rockwell, Georgia, serif;
+}
+
+h2{
+	text-align: left;
+	font-family: Rockwell, Georgia, serif;
+	margin: 0;
+	padding-top: 15px;
+}
+
+input{
+	font-size: 1em;
+	width: 4em;
+}
+
+table{
+	margin: 10px auto;
+	font-size: 1em;
+	font-family: sans-serif;
+	border-collapse: separate;
+	border-spacing: 10px 0;
+}
+
+th{
+	text-align: right;
+}
+
+tr{
+	line-height: 2.5em;
+}
+
+.panel{
+	border: 2px solid black;
+	border-radius: 7px;
+}
+
+.calculator{
+	width: 40%;
+	margin: 0 2% 0 5%;
+	height: 444px;
+	float: left;
+}
+
+.calculator-button{
+	height: 40px;
+	margin: 10px 10%;
+	min-width: 50px;
+	width: 30%;
+	border: 3px solid #333;
+	border-radius: 10px;
+	font-size: 1em;
+	position: relative;
+	bottom: -70px;
+}
+
+.customer{
+	width: 40%;
+	margin: 0 2% 20px 5%;
+	float: left;
+}
+
+.total>th, .total>td{
+	border-top: 2px solid black;
+}
+
+.earnings{
+	float: left;
+	margin: 0 2% 20px 5%;
+	width: 40%;
+}
+
+.reset{
+	position: absolute;
+	bottom: 10%;
+	right: 10%;
+}
+
+.panel-title{
+	margin-left: 10px;
+}
+
+.total-table{
+	margin: auto auto 0 39%;
+}
+
+.calculator-table{
+	border-spacing: 25px 25px;
+}
+
+.calculator .title-area{
+	background-color: #FEC;
+}
+
+.customer .title-area{
+	background-color: #CEF;
+}
+
+.earnings .title-area{
+	background-color: #C8FFC8;
+}
