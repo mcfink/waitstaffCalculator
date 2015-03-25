@@ -20,7 +20,7 @@
 		<hr>
 	</div>
 	<div class="main-panel">
-		<form name="tipForm" ng-submit="submit()">
+		<form name="tipForm">
 			<table class="calculator-table">
 				<tr>
 					<th>Base Meal Price: </th><td>$ <input name="meal_price" type="number" ng-model="meal_price" step="0.01"required></td>
@@ -32,7 +32,7 @@
 					<th>Tip Percentage: </th><td>% <input type="number" ng-model="tip_percentage" required></td>
 				</tr>
 			</table>
-			<button class="submit calculator-button" type="submit">Submit</button><button class="cancel calculator-button" type="cancel" ng-click="cancel()">Cancel</button>
+			<button class="submit calculator-button" type="submit" ng-click="submit()">Submit</button><button class="cancel calculator-button" type="cancel" ng-click="cancel()">Cancel</button>
 		</form>
 	</div>
 </div>
