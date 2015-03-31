@@ -16,6 +16,7 @@
 					<th>Tip Percentage: </th><td>% <input type="number" ng-model="tip_percentage" required></td>
 				</tr>
 			</table>
+			<p class="error" ng-if="tipForm.$submitted && tipForm.$invalid">Please verify all of your inputs are numbers</p>
 			<button class="submit calculator-button" type="submit" ng-click="submit()">Submit</button><button class="cancel calculator-button" type="cancel" ng-click="cancel()">Cancel</button>
 		</form>
 	</div>

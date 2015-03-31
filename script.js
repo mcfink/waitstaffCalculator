@@ -70,6 +70,7 @@ angular.module('waitstaffApp', ['ngRoute'])
 			$scope.meal_price = null;
 			$scope.tax_rate = null;
 			$scope.tip_percentage = null;
+
 		}
 
 		
