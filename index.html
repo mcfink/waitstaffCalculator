@@ -11,84 +11,18 @@
 </head>
 
 <body ng-controller="tipController">
+<div class="container-block panel">
+	<header>
+		<h1>Waitstaff Calculator</h1>
+	</header>
 
-<header>
-	<h1>Waitstaff Calculator</h1>
-</header>
+	<nav class="primary-nav center">
+		<a href="#/">Welcome</a>
+		<a href="#/calculator">New Meal</a>
+		<a href="#/summary">My Earnings</a>
+	</nav>
 
-<nav class="primary-nav">
-	<a href="#/home">Welcome</a>
-	<a href="#/calculator">New Meal</a>
-	<a href="#/summary">My Earnings</a>
-</nav>
-
+</div>
 <div ng-view></div>
 
-<div class="panel calculator">
-	<div class="title-area">
-		<h2 class="panel-title">Meal Details</h2>
-		<hr>
-	</div>
-	<div class="main-panel">
-		<form name="tipForm">
-			<table class="calculator-table">
-				<tr>
-					<th>Base Meal Price: </th><td>$ <input name="meal_price" type="number" ng-model="meal_price" step="0.01"required></td>
-				</tr>
-				<tr>
-					<th>Tax Rate: </th><td>% <input type="number" ng-model="tax_rate" required></td>
-				</tr>
-				<tr>
-					<th>Tip Percentage: </th><td>% <input type="number" ng-model="tip_percentage" required></td>
-				</tr>
-			</table>
-			<button class="submit calculator-button" type="submit" ng-click="submit()">Submit</button><button class="cancel calculator-button" type="cancel" ng-click="cancel()">Cancel</button>
-		</form>
-	</div>
-</div>
 
-<div class="panel customer">
-	<div class="title-area">
-		<h2 class="panel-title">Customer Charges</h2>
-		<hr>
-	</div>
-	<div class="content-area">
-		<table>
-			<tr>
-				<th>Subtotal:</th><td>{{subtotal | currency : $ : 2 }}</td>
-			</tr>
-			<tr>
-				<th>Tip:</th><td>{{tip | currency : $ : 2 }}</td>
-			</tr>
-			<tr>
-				<td colspan="2"><hr></td>
-			</tr>
-			<tr>
-				<th>Total:</th><td>{{total | currency : $ : 2 }}</td>
-			</tr>
-		</table>
-	</div>
-</div>
-
-<div class="panel earnings">
-	<div class="title-area">
-		<h2 class="panel-title">My Earnings Info</h2>
-		<hr>
-	</div>
-	<div class="content-area">
-		<table>
-			<tr>
-				<th>Tip Total:</th><td>{{tip_total | currency : $ : 2 }}</td>
-			</tr>
-			<tr>
-				<th>Meal Count:</th><td>{{meal_count}} meals</td>
-			</tr>
-			<tr>
-				<th>Average Tip Per Meal:</th><td>{{ average_tip | currency : $ : 2 }}</td>
-			</tr>
-		</table>
-	</div>
-</div>
-<div class="reset">
-	<button class="reset" type="reset" ng-click="reset()">Reset!</button>
-</div>

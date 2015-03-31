@@ -1,0 +1,22 @@
+<div class="panel earnings">
+	<div class="title-area">
+		<h2 class="panel-title">My Earnings Info</h2>
+		<hr>
+	</div>
+	<div class="content-area">
+		<table>
+			<tr>
+				<th>Tip Total:</th><td>{{tip_total | currency : $ : 2 }}</td>
+			</tr>
+			<tr>
+				<th>Meal Count:</th><td>{{meal_count}} meals</td>
+			</tr>
+			<tr>
+				<th>Average Tip Per Meal:</th><td>{{ average_tip | currency : $ : 2 }}</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="reset">
+	<button class="reset" type="reset" ng-click="reset()">Reset!</button>
+</div>

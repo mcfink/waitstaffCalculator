@@ -15,6 +15,15 @@ input{
 	width: 4em;
 }
 
+nav{
+	text-align: center;
+	font-family: sans-serif;
+}
+
+nav a{
+	padding: 10px 10px;
+}
+
 table{
 	margin: 10px auto;
 	font-size: 1em;
@@ -31,9 +40,36 @@ tr{
 	line-height: 2.5em;
 }
 
+div.container-block{
+	background-color: #EDE;
+
+	padding-bottom: 15px;
+}
+
+p{
+	text-align: center;
+	font-weight: 800;
+}
+
+ol{
+	margin-left: 30%;
+	width: 40%;
+}
+
+li{
+	margin: 10px 0;
+	line-height: 1.2em;
+}
+
+p, li{
+	font-family: sans-serif;
+}
+
 .panel{
 	border: 2px solid black;
 	border-radius: 7px;
+	margin: 15px 3%;
+
 }
 
 .calculator{
@@ -66,9 +102,8 @@ tr{
 }
 
 .earnings{
-	float: left;
-	margin: 0 2% 20px 5%;
-	width: 40%;
+	margin: auto 20%;
+	width: 60%;
 }
 
 .reset{
