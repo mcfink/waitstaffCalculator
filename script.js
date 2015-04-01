@@ -1,4 +1,21 @@
-angular.module('waitstaffApp', ['ngRoute'])
+angular.module('waitstaffApp', ['ngRoute', 'ngAnimate'])
+	.run(function($rootScope, $location, $timeout){
+		$rootScope.$on('$routeChangeStart', function(){
+			$rootScope.isLoading = true;
+			console.log($location.path());
+			if($location.path() == "/summary"){
+				$rootScope.titleColor = "blue";
+			} else if ($location.path() == "/calculator"){
+				$rootScope.titleColor = "green";
+			} else { $rootScope.titleColor = "red"}
+		});
+		$rootScope.$on('$routeChangeSuccess', function(){
+			$timeout(function(){
+				$rootScope.isLoading = false;
+			}, 500);
+		});
+	})
+
 	.config(['$routeProvider', function($routeProvider){
 		$routeProvider.when('/', {
 			templateUrl : 'welcome.html'

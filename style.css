@@ -41,9 +41,27 @@ tr{
 }
 
 div.container-block{
-	background-color: #EDE;
-
 	padding-bottom: 15px;
+}
+
+div.container-block{
+	transition: all linear 1s;
+}
+
+.red div.container-block {
+	background-color: #FFB8B8;
+}
+
+.green div.container-block {
+	background-color: #B8FFB8;
+}
+
+.blue div.container-block {
+	background-color: #B8B8FF;
+}
+
+.loading div.container-block{
+	background-color: #CCC;
 }
 
 p{
@@ -131,17 +149,49 @@ p, li{
 }
 
 .calculator .title-area{
-	background-color: #FEC;
+	background-color: #B8FFB8;
 }
 
 .customer .title-area{
-	background-color: #CEF;
+	background-color: #B8FFB8;
 }
 
 .earnings .title-area{
-	background-color: #C8FFC8;
+	background-color: #B8B8FF;
 }
 
 .instructions .title-area{
-	background-color: #C8FFC8;
+	background-color: #FFB8B8;
+}
+
+.animate-view.ng-enter, .animate-view.ng-leave{
+	transition: 0.5s linear all;
+}
+
+.animate-view.ng-enter{
+	position: absolute;
+	left: -1000px;
+	width: 100%;
+	opacity: 0;
+}
+
+.animate-view.ng-enter.ng-enter-active{
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	opacity: 1;
+}
+
+.animate-view.ng-leave{
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	opacity: 1;
+}
+
+.animate-view.ng-leave.ng-leave-active{
+	position: absolute;
+	left: 1000px;
+	width: 100%;
+	opacity: 0;
 }

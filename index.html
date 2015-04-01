@@ -6,11 +6,12 @@
   <title>Waitstaff Calculator</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script type="text/javascript" src="angular/angular.js"></script>
+  <script type="text/javascript" src="angular/angular-animate.js"></script>
   <script type="text/javascript" src="angular/angular-route.js"></script>
   <script src="script.js"></script>
 </head>
 
-<body ng-controller="tipController">
+<body ng-controller="tipController" ng-class="{loading: isLoading}" class="{{titleColor}}">
 <div class="container-block panel">
 	<header>
 		<h1>Waitstaff Calculator</h1>
@@ -23,6 +24,7 @@
 	</nav>
 
 </div>
-<div ng-view></div>
 
+
+<div ng-view class="animate-view"></div>
 
